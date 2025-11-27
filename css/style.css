@@ -1,0 +1,444 @@
+body{
+    background: linear-gradient(156deg, #1B5467 8.37%, #062024 80.3%);
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/dots.png");
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: .5;
+    pointer-events: none;
+    z-index: 1000;            
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/noise.png");
+    background-repeat: repeat;
+    opacity: .2; 
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: overlay; 
+}
+
+.gloock-regular {
+  font-family: "Gloock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.luxurious-script-regular {
+  font-family: "Luxurious Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p{
+    font-family: "Courier Prime", monospace;
+    color: #F8FAFB;
+    font-size: 32px;
+}
+
+p.button{
+    color: #F8FAFB;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px 12px;
+    background-color: #E55E29;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Quando passi sopra con il mouse */
+p.button:hover {
+    background-color: #d14e1f; /* Colore più scuro */
+    transform: translateY(-2px); /* Solleva leggermente */
+    box-shadow: 0 4px 12px rgba(229, 94, 41, 0.4); /* Ombra */
+}
+
+/* Quando clicchi */
+p.button:active {
+    background-color: #b8431a; /* Ancora più scuro */
+    transform: translateY(0); /* Torna giù */
+    box-shadow: 0 2px 6px rgba(229, 94, 41, 0.3); /* Ombra ridotta */
+}
+
+a{
+    font-family: "Courier Prime", monospace;
+    color: #F8FAFB;
+    font-size: 32px;
+    margin: 80px auto;
+    font-kerning: normal;
+    line-height: 46px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+a.contacts {
+    cursor: pointer; /* Mostra che è cliccabile */
+    transition: all 0.3s ease; /* Transizione fluida */
+}
+
+/* Effetto glow al passaggio del mouse */
+a.contacts:hover {
+    color: #E55E29; /* Cambia colore */
+    text-shadow: 
+        0 0 10px rgba(229, 94, 41, 0.8),
+        0 0 20px rgba(229, 94, 41, 0.6),
+        0 0 30px rgba(229, 94, 41, 0.4),
+        0 0 40px rgba(229, 94, 41, 0.2); /* Effetto glow */
+    transform: scale(1.1); /* Ingrandisce leggermente */
+}
+
+/* Quando clicchi */
+a.contacts:active {
+    transform: scale(1.05);
+    text-shadow: 
+        0 0 15px rgba(229, 94, 41, 1),
+        0 0 25px rgba(229, 94, 41, 0.8);
+}
+
+.hero-image-container {
+    max-height: 100vh; /* Regola questo valore */
+    overflow: hidden; /* Nasconde la parte eccedente */
+    width: 100%;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    font-family: "Gloock", serif;
+    font-weight: 400;
+    font-size: 88px;
+    font-kerning: normal;
+    color: #F8FAFB;
+    margin-bottom: 0;
+}
+
+.overlap-img {
+  margin-top: -450px; /* sovrapposizione verso l’alto */
+  margin-left: 950px;
+  width: 80%;
+  z-index: 2;        /* si mostra sopra altri elementi */
+  position: relative; /* serve per far valere lo z-index */
+}
+
+.overlap-img2 {
+  margin-top: 20px; /* sovrapposizione verso l’alto */
+  margin-left: 50px;
+  width: 80%;
+  z-index: 2;        /* si mostra sopra altri elementi */
+  position: relative; /* serve per far valere lo z-index */
+}
+
+@media screen and (max-width: 991.98px) { /* usa breakpoint di Bootstrap per md */
+  .overlap-img {
+    position: static !important;  /* forza l’annullamento di absolute */
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    margin-inline: auto;
+  }
+}
+
+h2{
+    font-family: "Gloock", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-kerning: normal;
+    color: #F8FAFB;
+}
+
+h3{
+    font-family: "Luxurious Script", cursive;
+    font-weight: 400;
+    font-size: 332px;
+    font-kerning: normal;
+    color: #F8FAFB;
+    margin-top: -324px;
+}
+
+.subtitle{
+    color: #9DB8C4;
+    font-size: 18px;
+    font-kerning: normal;
+    line-height: 22px;
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+}
+
+.profile-img {
+    max-width: 76.5%; /* Regola questa percentuale come preferisci */
+    height: auto;
+    margin-left: auto; /* Centra l'immagine */
+}
+
+.floating-img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.tool-icon {
+    width:fit-content; 
+    height: auto; 
+    max-width: none;
+}
+
+.icon-wrapper {
+    /* Rende il div un contenitore flex */
+    display: flex;
+
+    /* Centra orizzontalmente il gruppo di icone all'interno del col-12 */
+    justify-content: center;
+
+    /* Aggiunge uno spazio uniforme tra le icone. 
+       Questo distribuisce lo spazio rimanente tra gli elementi. */
+    gap: fit-content; /* Imposta la distanza tra le icone a 30 pixel. Cambia questo valore a piacere. */
+}
+
+.negative-margin-desktop {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .negative-margin-desktop {
+        margin-top: -100px !important;
+    }
+}
+
+@media only screen and (max-width:575px){
+
+.dynamic-title{
+    position: absolute;
+    transform: translateY(-648px);
+}
+
+.dynamic-title2{
+    position: absolute;
+    transform: translateY(-580px);
+}
+
+
+p{
+    font-family: "Courier Prime", monospace;
+    color: #F8FAFB;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+a{
+    font-family: "Courier Prime", monospace;
+    color: #F8FAFB;
+    font-size: 24px;
+}
+
+.subtitle{
+    color: #9DB8C4;
+    font-size: 16px;
+    font-kerning: normal;
+    line-height: 22px;
+}
+
+h1{
+    font-family: "Gloock", serif;
+    font-weight: 400;
+    font-size: 48px;
+    font-kerning: normal;
+    color: #F8FAFB;
+}
+
+h2{
+    font-family: "Gloock", serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #F8FAFB;
+}
+
+h3{
+    font-family: "Luxurious Script", cursive;
+    font-weight: 400;
+    font-size: 132px;
+    font-kerning: normal;
+    color: #F8FAFB;
+    margin-top: -64px;
+}
+
+img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+}
+
+.profile-img {
+    max-width:fit-content; /* Regola questa percentuale come preferisci */
+    height: auto;
+}
+
+.icon-wrapper {
+        gap:fit-content; /* Meno spazio tra le icone su schermi piccoli */
+}
+    
+/* Ridimensioniamo le icone stesse */
+.tool-icon {
+    width: fit-content;
+}
+
+}
+
+
+/* LIGHTBOX STYLES */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 20000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 33, 34, 0.97);
+    backdrop-filter: blur(10px);
+    overflow-y: auto;
+}
+
+.lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lightbox-content {
+    background: linear-gradient(135deg, #1B5467 0%, #0a2a32 100%);
+    border: 2px solid #9DB8C4;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(39, 35, 35, 0.7);
+    padding: 40px;
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #9DB8C4;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.lightbox-close:hover {
+    color: #E55E29;
+    transform: rotate(90deg);
+}
+
+.lightbox h1 {
+    margin-bottom: 20px;
+}
+
+.lightbox p {
+    font-size: 20px;
+    line-height: 32px;
+    margin: 20px 0;
+}
+
+.lightbox h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 767px) {
+    .lightbox-content {
+        width: 95%;
+        padding: 30px 20px;
+        max-height: 90vh;
+    }
+    
+    .lightbox-close {
+        font-size: 36px;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .lightbox p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
