@@ -18,24 +18,9 @@ body::before {
     background-image: url("../images/dots.png");
     background-repeat: repeat;
     background-size: cover;
-    opacity: .5;
+    opacity: 1;
     pointer-events: none;
     z-index: 1000;            
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/noise.png");
-    background-repeat: repeat;
-    opacity: .2; 
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: overlay; 
 }
 
 .gloock-regular {
@@ -82,9 +67,9 @@ p{
 
 p.button{
     color: #F8FAFB;
-    font-size: 18px;
+    font-size: 2vh;
     font-weight: bold;
-    padding: 16px 12px;
+    padding: 2vh;
     background-color: #E55E29;
     border-radius: 12px;
     text-align: center;
@@ -110,10 +95,10 @@ p.button:active {
 a{
     font-family: "Courier Prime", monospace;
     color: #F8FAFB;
-    font-size: 32px;
-    margin: 80px auto;
+    font-size: 3.5vh;
+    margin: 10vh auto;
     font-kerning: normal;
-    line-height: 46px;
+    line-height: 5vh;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -276,19 +261,19 @@ img {
 p{
     font-family: "Courier Prime", monospace;
     color: #F8FAFB;
-    font-size: 20px;
+    font-size: 2.5vh;
     line-height: 24px;
 }
 
 a{
     font-family: "Courier Prime", monospace;
     color: #F8FAFB;
-    font-size: 24px;
+    font-size: 3vh;
 }
 
 .subtitle{
     color: #9DB8C4;
-    font-size: 16px;
+    font-size: 2vh;
     font-kerning: normal;
     line-height: 22px;
 }
@@ -296,7 +281,7 @@ a{
 h1{
     font-family: "Gloock", serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 6vh;
     font-kerning: normal;
     color: #F8FAFB;
 }
@@ -304,17 +289,17 @@ h1{
 h2{
     font-family: "Gloock", serif;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 4vh;
     color: #F8FAFB;
 }
 
 h3{
     font-family: "Luxurious Script", cursive;
     font-weight: 400;
-    font-size: 112px;
+    font-size: 16vh;
     font-kerning: normal;
     color: #F8FAFB;
-    margin-top: -64px;
+    margin-top: -10vh;
 }
 
 img {
@@ -335,6 +320,16 @@ img {
 /* Ridimensioniamo le icone stesse */
 .tool-icon {
     width: fit-content;
+}
+
+.no-scrollbar {
+  overflow: auto; /* or scroll */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 }
