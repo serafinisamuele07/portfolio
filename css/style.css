@@ -242,6 +242,16 @@ img {
 
 @media (min-width: 768px) {
     .negative-margin-desktop {
+        margin-top: -150px !important;
+    }
+}
+
+.negative-margin-desktop2 {
+    margin-top: 1 !important;
+}
+
+@media (min-width: 768px) {
+    .negative-margin-desktop2 {
         margin-top: -50px !important;
     }
 }
