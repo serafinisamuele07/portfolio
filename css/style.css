@@ -15,7 +15,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../images/dots.png");
+    background-image: url("../images/dots.webp");
     background-repeat: repeat;
     background-size: cover;
     opacity: 1;
@@ -78,18 +78,18 @@ p.button{
     align-items: end;
 }
 
-/* Quando passi sopra con il mouse */
+/* hover */
 p.button:hover {
-    background-color: #d14e1f; /* Colore più scuro */
-    transform: translateY(-2px); /* Solleva leggermente */
-    box-shadow: 0 4px 12px rgba(229, 94, 41, 0.4); /* Ombra */
+    background-color: #d14e1f; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(229, 94, 41, 0.4);
 }
 
-/* Quando clicchi */
+/* click */
 p.button:active {
-    background-color: #b8431a; /* Ancora più scuro */
-    transform: translateY(0); /* Torna giù */
-    box-shadow: 0 2px 6px rgba(229, 94, 41, 0.3); /* Ombra ridotta */
+    background-color: #b8431a;
+    transform: translateY(0); 
+    box-shadow: 0 2px 6px rgba(229, 94, 41, 0.3);
 }
 
 a{
@@ -107,21 +107,20 @@ a{
 
 a.contacts {
     cursor: pointer; /* Mostra che è cliccabile */
-    transition: all 0.3s ease; /* Transizione fluida */
+    transition: all 0.3s ease;
 }
 
-/* Effetto glow al passaggio del mouse */
+/* Effetto glow in hover */
 a.contacts:hover {
-    color: #E55E29; /* Cambia colore */
+    color: #E55E29;
     text-shadow: 
         0 0 10px rgba(229, 94, 41, 0.8),
         0 0 20px rgba(229, 94, 41, 0.6),
         0 0 30px rgba(229, 94, 41, 0.4),
-        0 0 40px rgba(229, 94, 41, 0.2); /* Effetto glow */
-    transform: scale(1.1); /* Ingrandisce leggermente */
+        0 0 40px rgba(229, 94, 41, 0.2);
+    transform: scale(1.1);
 }
 
-/* Quando clicchi */
 a.contacts:active {
     transform: scale(1.05);
     text-shadow: 
@@ -130,8 +129,8 @@ a.contacts:active {
 }
 
 .hero-image-container {
-    max-height: 100vh; /* Regola questo valore */
-    overflow: hidden; /* Nasconde la parte eccedente */
+    max-height: 100vh;
+    overflow: hidden; /* Nasconde la parte in più della foto */
     width: 100%;
 }
 
@@ -150,24 +149,24 @@ h1{
 }
 
 .overlap-img {
-  margin-top: -25vw; /* sovrapposizione verso l’alto */
+  margin-top: -25vw; 
   margin-left: 50vw;
   width: 80%;
-  z-index: 2;        /* si mostra sopra altri elementi */
+  z-index: 2;  
   position: relative; /* serve per far valere lo z-index */
 }
 
 .overlap-img2 {
-  margin-top: 5vw; /* sovrapposizione verso l’alto */
+  margin-top: 5vw; 
   margin-left: 3vw;
   width: 80%;
-  z-index: 2;        /* si mostra sopra altri elementi */
-  position: relative; /* serve per far valere lo z-index */
+  z-index: 2;        
+  position: relative; 
 }
 
-@media screen and (max-width: 991.98px) { /* usa breakpoint di Bootstrap per md */
+@media screen and (max-width: 991.98px) { /* breakpoint per md */
   .overlap-img {
-    position: static !important;  /* forza l’annullamento di absolute */
+    position: static !important;  /* important forza l’annullamento di absolute */
     display: block;
     width: 100%;
     margin-top: 1rem;
@@ -206,9 +205,9 @@ img {
 }
 
 .profile-img {
-    max-width: 76.5%; /* Regola questa percentuale come preferisci */
+    max-width: 76.5%;
     height: auto;
-    margin-left: auto; /* Centra l'immagine */
+    margin-left: auto;
 }
 
 .floating-img {
@@ -225,15 +224,9 @@ img {
 }
 
 .icon-wrapper {
-    /* Rende il div un contenitore flex */
     display: flex;
-
-    /* Centra orizzontalmente il gruppo di icone all'interno del col-12 */
     justify-content: center;
-
-    /* Aggiunge uno spazio uniforme tra le icone. 
-       Questo distribuisce lo spazio rimanente tra gli elementi. */
-    gap: fit-content; /* Imposta la distanza tra le icone a 30 pixel. Cambia questo valore a piacere. */
+    gap: fit-content;
 }
 
 .negative-margin-desktop {
@@ -319,15 +312,14 @@ img {
 }
 
 .profile-img {
-    max-width:fit-content; /* Regola questa percentuale come preferisci */
+    max-width:fit-content; /* centra automaticamente*/
     height: auto;
 }
 
 .icon-wrapper {
-        gap:fit-content; /* Meno spazio tra le icone su schermi piccoli */
+        gap:fit-content;
 }
     
-/* Ridimensioniamo le icone stesse */
 .tool-icon {
     width: fit-content;
 }
@@ -345,7 +337,7 @@ img {
 }
 
 
-/* LIGHTBOX STYLES */
+/* LIGHTBOX */
 .lightbox {
     display: none;
     position: fixed;
