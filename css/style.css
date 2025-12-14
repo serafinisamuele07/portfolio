@@ -65,6 +65,13 @@ p{
     font-size: 1.7vw;
 }
 
+span{   
+    font-family: "Courier Prime", monospace;
+    color: #F8FAFB;
+    font-size: 1.1vw;
+    padding-bottom:2vh;
+}
+
 p.button{
     color: #F8FAFB;
     font-size: 2vh;
@@ -266,6 +273,13 @@ p{
     color: #F8FAFB;
     font-size: 2.5vh;
     line-height: 24px;
+}
+
+span{   
+    font-family: "Courier Prime", monospace;
+    color: #F8FAFB;
+    font-size: 2.5vw;
+    padding-bottom:2vh;
 }
 
 a{
